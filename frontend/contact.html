@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Portal - Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    .contact-info-card {
+      transition: all 0.3s ease;
+    }
+    
+    .contact-info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    }
+    
+    footer {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 2rem 0;
+    }
+    
+    .map-container {
+      position: relative;
+      overflow: hidden;
+      height: 400px;
+      border-radius: 0.5rem;
+    }
+    
+    .map-container svg {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    
+    .social-icon:hover {
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow px-10 py-10">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-blue-600">Research Portal</h1>
+      <nav>
+        <ul class="flex space-x-6 text-lg">
+          <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
+           <li><a href="paper.html" class="hover:text-blue-500">Papers</a></li>
+          <li><a href="guide.html" class="hover:text-blue-500">Guidelines</a></li>
+          <li><a href="contact.html" class="hover:text-blue-500 text-blue-600">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
+    <div class="absolute inset-0 opacity-10">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+        <pattern id="pattern-circles" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+          <circle id="pattern-circle" cx="10" cy="10" r="2" fill="#3b82f6"></circle>
+        </pattern>
+        <rect id="rect" x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)"></rect>
+      </svg>
+    </div>
+    <div class="container mx-auto px-6 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl font-bold text-blue-800 mb-6">Contact Us</h1>
+        <p class="text-xl text-gray-700">Have questions or need assistance? Our team is here to help you with any inquiries related to research submissions, the review process, or general information.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Information -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="contact-info-card bg-blue-50 p-8 rounded-lg text-center">
+          <div class="bg-blue-100 text-blue-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-map-marker-alt text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Visit Us</h3>
+          <p class="text-gray-700">123 University Avenue<br>Research City, RC 10001<br>United States</p>
+        </div>
+        
+        <div class="contact-info-card bg-blue-50 p-8 rounded-lg text-center">
+          <div class="bg-blue-100 text-blue-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-envelope text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Email Us</h3>
+          <p class="text-gray-700 mb-2">General Inquiries:<br><a href="mailto:info@researchportal.edu" class="text-blue-600 hover:underline">info@researchportal.edu</a></p>
+          <p class="text-gray-700">Support:<br><a href="mailto:support@researchportal.edu" class="text-blue-600 hover:underline">support@researchportal.edu</a></p>
+        </div>
+        
+        <div class="contact-info-card bg-blue-50 p-8 rounded-lg text-center">
+          <div class="bg-blue-100 text-blue-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-phone text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-4">Call Us</h3>
+          <p class="text-gray-700 mb-2">Main Office:<br>(123) 456-7890</p>
+          <p class="text-gray-700">Technical Support:<br>(123) 456-7891</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form and Map -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div>
+          <h2 class="text-3xl font-bold text-blue-800 mb-8">Send Us a Message</h2>
+          <form class="contact-form bg-white p-8 rounded-lg shadow-md">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="first-name" class="block text-gray-700 font-medium mb-2">First Name</label>
+                <input type="text" id="first-name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none" required>
+              </div>
+              <div>
+                <label for="last-name" class="block text-gray-700 font-medium mb-2">Last Name</label>
+                <input type="text" id="last-name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none" required>
+              </div>
+            </div>
+            
+            <div class="mb-6">
+              <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+              <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none" required>
+            </div>
+            
+            <div class="mb-6">
+              <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+              <select id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none bg-white" required>
+                <option value="" disabled selected>Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="submission">Research Submission</option>
+                <option value="review">Review Process</option>
+                <option value="technical">Technical Support</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="mb-6">
+              <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+              <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none resize-none" required></textarea>
+            </div>
+            
+            <div class="mb-6">
+              <label class="flex items-center">
+                <input type="checkbox" class="w-5 h-5 text-blue-600">
+                <span class="ml-2 text-gray-700">I agree to the <a href="#" class="text-blue-600 hover:underline">privacy policy</a></span>
+              </label>
+            </div>
+            
+            <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition w-full md:w-auto">Send Message</button>
+          </form>
+        </div>
+        
+        <!-- Map -->
+        <div>
+          <h2 class="text-3xl font-bold text-blue-800 mb-8">Find Us</h2>
+          <div class="map-container shadow-md">
+            <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+              <!-- Simplified map background -->
+              <rect width="800" height="600" fill="#e6f2ff" />
+              
+              <!-- Roads -->
+              <line x1="0" y1="300" x2="800" y2="300" stroke="#d1d5db" stroke-width="20" />
+              <line x1="400" y1="0" x2="400" y2="600" stroke="#d1d5db" stroke-width="15" />
+              
+              <!-- Buildings -->
+              <rect x="100" y="100" width="150" height="100" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2" />
+              <rect x="550" y="150" width="180" height="120" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2" />
+              <rect x="150" y="400" width="200" height="150" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2" />
+              <rect x="500" y="380" width="120" height="170" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2" />
+              
+              <!-- University Building (Our Location) -->
+              <rect x="350" y="250" width="100" height="100" fill="#3b82f6" />
+              <text x="400" y="300" text-anchor="middle" fill="white" font-weight="bold">Research Portal</text>
+              
+              <!-- Location Pin -->
+              <circle cx="400" cy="300" r="15" fill="#ef4444" />
+              <circle cx="400" cy="300" r="7" fill="white" />
+              
+              <!-- Park -->
+              <circle cx="650" cy="450" r="80" fill="#86efac" stroke="#22c55e" stroke-width="2" />
+              
+              <!-- Lake -->
+              <ellipse cx="200" cy="200" rx="70" ry="50" fill="#93c5fd" />
+            </svg>
+          </div>
+          
+          <div class="mt-8 bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4">Office Hours</h3>
+            <ul class="space-y-2">
+              <li class="flex justify-between">
+                <span class="text-gray-700">Monday - Friday</span>
+                <span class="font-medium">9:00 AM - 5:00 PM</span>
+              </li>
+              <li class="flex justify-between">
+                <span class="text-gray-700">Saturday</span>
+                <span class="font-medium">10:00 AM - 2:00 PM</span>
+              </li>
+              <li class="flex justify-between">
+                <span class="text-gray-700">Sunday</span>
+                <span class="font-medium">Closed</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Department Contacts -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-blue-800 mb-12 text-center">Department Contacts</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-blue-50 rounded-lg overflow-hidden shadow-sm">
+          <div class="bg-blue-600 text-white p-4">
+            <h3 class="text-xl font-semibold">Editorial Office</h3>
+          </div>
+          <div class="p-6">
+            <p class="mb-4 text-gray-700">For inquiries related to manuscript submissions, the review process, and publication status.</p>
+            <div class="flex items-center mb-3">
+              <i class="fas fa-user mr-3 text-blue-600"></i>
+              <span>Dr. Emily Johnson, Chief Editor</span>
+            </div>
+            <div class="flex items-center mb-3">
+              <i class="fas fa-envelope mr-3 text-blue-600"></i>
+              <a href="mailto:editorial@researchportal.edu" class="text-blue-600 hover:underline">editorial@researchportal.edu</a>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-phone mr-3 text-blue-600"></i>
+              <span>(123) 456-7892</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-blue-50 rounded-lg overflow-hidden shadow-sm">
+          <div class="bg-blue-600 text-white p-4">
+            <h3 class="text-xl font-semibold">Technical Support</h3>
+          </div>
+          <div class="p-6">
+            <p class="mb-4 text-gray-700">For assistance with the submission system, account issues, or technical difficulties.</p>
+            <div class="flex items-center mb-3">
+              <i class="fas fa-user mr-3 text-blue-600"></i>
+              <span>Michael Chen, IT Manager</span>
+            </div>
+            <div class="flex items-center mb-3">
+              <i class="fas fa-envelope mr-3 text-blue-600"></i>
+              <a href="mailto:support@researchportal.edu" class="text-blue-600 hover:underline">support@researchportal.edu</a>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-phone mr-3 text-blue-600"></i>
+              <span>(123) 456-7893</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-blue-50 rounded-lg overflow-hidden shadow-sm">
+          <div class="bg-blue-600 text-white p-4">
+            <h3 class="text-xl font-semibold">Administrative Office</h3>
+          </div>
+          <div class="p-6">
+            <p class="mb-4 text-gray-700">For general inquiries, partnerships, and administrative matters.</p>
+            <div class="flex items-center mb-3">
+              <i class="fas fa-user mr-3 text-blue-600"></i>
+              <span>Sarah Williams, Administrative Director</span>
+            </div>
+            <div class="flex items-center mb-3">
+              <i class="fas fa-envelope mr-3 text-blue-600"></i>
+              <a href="mailto:admin@researchportal.edu" class="text-blue-600 hover:underline">admin@researchportal.edu</a>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-phone mr-3 text-blue-600"></i>
+              <span>(123) 456-7894</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media -->
+  <section class="py-16 bg-blue-600 text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8">Connect With Us</h2>
+      <p class="text-xl mb-10 max-w-2xl mx-auto">Follow us on social media to stay updated with the latest research publications, events, and announcements.</p>
+      
+      <div class="flex justify-center space-x-6">
+        <a href="#" class="social-icon bg-white text-blue-600 hover:bg-blue-50">
+          <i class="fab fa-twitter text-xl"></i>
+        </a>
+        <a href="#" class="social-icon bg-white text-blue-600 hover:bg-blue-50">
+          <i class="fab fa-facebook-f text-xl"></i>
+        </a>
+        <a href="#" class="social-icon bg-white text-blue-600 hover:bg-blue-50">
+          <i class="fab fa-linkedin-in text-xl"></i>
+        </a>
+        <a href="#" class="social-icon bg-white text-blue-600 hover:bg-blue-50">
+          <i class="fab fa-instagram text-xl"></i>
+        </a>
+        <a href="#" class="social-icon bg-white text-blue-600 hover:bg-blue-50">
+          <i class="fab fa-youtube text-xl"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-blue-800 mb-8 text-center">Frequently Asked Questions</h2>
+        
+        <div class="space-y-4">
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <button class="accordion-button w-full text-left p-6 font-medium flex justify-between items-center">
+              <span>What is the best way to contact for urgent inquiries?</span>
+              <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+            </button>
+            <div class="accordion-content px-6 pb-6">
+              <p class="text-gray-700">For urgent inquiries, we recommend calling our main office at (123) 456-7890 during business hours. For technical emergencies related to the submission system, please email support@researchportal.edu with "URGENT" in the subject line.</p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <button class="accordion-button w-full text-left p-6 font-medium flex justify-between items-center">
+              <span>How long does it typically take to receive a response?</span>
+              <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+            </button>
+            <div class="accordion-content px-6 pb-6">
+              <p class="text-gray-700">We strive to respond to all inquiries within 1-2 business days. For complex issues or during peak submission periods, response times may be slightly longer. Rest assured that all messages are important to us and will be addressed as soon as possible.</p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <button class="accordion-button w-full text-left p-6 font-medium flex justify-between items-center">
+              <span>Can I schedule an appointment to discuss my research?</span>
+              <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+            </button>
+            <div class="accordion-content px-6 pb-6">
+              <p class="text-gray-700">Yes, we offer consultations for researchers who would like to discuss their work before submission. Please email editorial@researchportal.edu with a brief description of your research and preferred meeting times. Virtual meetings are available for those unable to visit our office in person.</p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <button class="accordion-button w-full text-left p-6 font-medium flex justify-between items-center">
+              <span>How can I provide feedback about the Research Portal?</span>
+              <i class="fas fa-chevron-down text-blue-600 transition-transform"></i>
+            </button>
+            <div class="accordion-content px-6 pb-6">
+              <p class="text-gray-700">We value your feedback! You can share your thoughts and suggestions by filling out the contact form on this page or by emailing feedback@researchportal.edu. Your input helps us improve our services and better meet the needs of the research community.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container mx-auto px-6 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Research Portal</h3>
+          <p class="text-blue-100 mb-4">Advancing knowledge through collaborative research and academic excellence.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-blue-100 hover:text-white transition">Home</a></li>
+            <li><a href="#" class="text-blue-100 hover:text-white transition">About Us</a></li>
+            <li><a href="#" class="text-blue-100 hover:text-white transition">Research Fields</a></li>
+            <li><a href="#" class="text-blue-100 hover:text-white transition">Submit Research</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="guide.html" class="text-blue-100 hover:text-white transition">Guidelines</a></li>
+            <li><a href="#" class="text-blue-100 hover:text-white transition">FAQs</a></li>
+            <li><a href="#" class="text-blue-100 hover:text-white transition">Research Tools</a></li>
+            <li><a href="#" class="text-blue-100 hover:text-white transition">Publication Ethics</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact Us</h4>
+          <ul class="space-y-2">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+              <span class="text-blue-100">123 University Ave, Research City, RC 10001</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-2"></i>
+              <a href="mailto:info@researchportal.edu" class="text-blue-100 hover:text-white transition">info@researchportal.edu</a>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-2"></i>
+              <span class="text-blue-100">(123) 456-7890</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-blue-500 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <p>&copy; 2023 University Research Portal. All rights reserved.</p>
+        </div>
+        <div>
+          <ul class="flex space-x-4">
+            <li><a href="#" class="text-blue-200 hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition">Terms of Use</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Accordion functionality
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+    
+    accordionButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        
+        content.classList.toggle('active');
+        
+        if (content.classList.contains('active')) {
+          icon.style.transform = 'rotate(180deg)';
+        } else {
+          icon.style.transform = 'rotate(0)';
+        }
+      });
+    });
+    
+    // Form submission (demo)
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for your message! This is a demo form. In a real implementation, your message would be sent to our team.');
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .stats-item {
+      border-bottom: 3px solid #3b82f6;
+    }
+    
+    .testimonial-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .news-card {
+      overflow: hidden;
+    }
+    
+    .news-card img {
+      transition: transform 0.5s ease;
+    }
+    
+    .news-card:hover img {
+      transform: scale(1.05);
+    }
+    
+    footer {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 2rem 0;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow px-10 py-10">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-blue-600">Research Portal</h1>
+      <nav>
+        <ul class="flex space-x-6 text-lg">
+          <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
+          <li><a href="paper.html" class="hover:text-blue-500">Papers</a></li>
+          <li><a href="guide.html" class="hover:text-blue-500">Guidelines</a></li>
+          <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative text-center py-28 bg-gradient-to-r from-blue-50 to-indigo-50">
+    <div class="absolute inset-0 opacity-10">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+        <pattern id="pattern-circles" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+          <circle id="pattern-circle" cx="10" cy="10" r="2" fill="#3b82f6"></circle>
+        </pattern>
+        <rect id="rect" x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)"></rect>
+      </svg>
+    </div>
+    <div class="container mx-auto px-6 relative z-10">
+      <h2 class="text-5xl font-bold mb-6 text-blue-800">Welcome to the University Research Portal</h2>
+      <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">Submit, review, and manage your research papers with ease. Join our community of academic excellence.</p>
+      <div class="flex justify-center space-x-4">
+        <a href="submit.html" class="bg-blue-600 text-white py-3 px-8 rounded-md hover:bg-blue-700 transition shadow-lg flex items-center">
+          <i class="fas fa-paper-plane mr-2"></i> Submit Your Research
+        </a>
+        <a href="#learn-more" class="bg-white text-blue-600 border border-blue-600 py-3 px-8 rounded-md hover:bg-blue-50 transition shadow-lg flex items-center">
+          <i class="fas fa-info-circle mr-2"></i> Learn More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        <div class="stats-item p-6">
+          <h3 class="text-4xl font-bold text-blue-600 mb-2">5,000+</h3>
+          <p class="text-gray-600">Research Papers</p>
+        </div>
+        <div class="stats-item p-6">
+          <h3 class="text-4xl font-bold text-blue-600 mb-2">1,200+</h3>
+          <p class="text-gray-600">Researchers</p>
+        </div>
+        <div class="stats-item p-6">
+          <h3 class="text-4xl font-bold text-blue-600 mb-2">85+</h3>
+          <p class="text-gray-600">Universities</p>
+        </div>
+        <div class="stats-item p-6">
+          <h3 class="text-4xl font-bold text-blue-600 mb-2">120+</h3>
+          <p class="text-gray-600">Research Fields</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="learn-more" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-16 text-blue-800">How Our Portal Works</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+          <div class="bg-blue-100 text-blue-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-upload text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-4 text-center">Submit Research</h3>
+          <p class="text-gray-600 text-center">Upload your research papers and manuscripts through our streamlined submission process.</p>
+        </div>
+        <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+          <div class="bg-blue-100 text-blue-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-search text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-4 text-center">Peer Review</h3>
+          <p class="text-gray-600 text-center">Get valuable feedback from experts in your field through our blind peer review system.</p>
+        </div>
+        <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+          <div class="bg-blue-100 text-blue-600 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
+            <i class="fas fa-book-open text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-4 text-center">Publish & Share</h3>
+          <p class="text-gray-600 text-center">Publish your approved research and share it with the global academic community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Research Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="flex justify-between items-center mb-12">
+        <h2 class="text-3xl font-bold text-blue-800">Latest Research</h2>
+        <a href="#" class="text-blue-600 hover:text-blue-800 flex items-center">
+          View all <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+          <div class="bg-blue-50 p-6">
+            <span class="bg-blue-600 text-white text-xs px-3 py-1 rounded-full">Biology</span>
+            <h3 class="text-xl font-semibold mt-4">Advances in Gene Therapy for Rare Diseases</h3>
+            <p class="text-gray-600 mt-2 text-sm">By Dr. Sarah Johnson, Harvard University</p>
+          </div>
+          <div class="p-6 border-t">
+            <p class="text-gray-600 mb-4">A groundbreaking study on novel gene therapy approaches for treating rare genetic disorders.</p>
+            <a href="#" class="text-blue-600 hover:text-blue-800">Read more →</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+          <div class="bg-blue-50 p-6">
+            <span class="bg-green-600 text-white text-xs px-3 py-1 rounded-full">Computer Science</span>
+            <h3 class="text-xl font-semibold mt-4">Quantum Computing: Breaking New Barriers</h3>
+            <p class="text-gray-600 mt-2 text-sm">By Prof. Michael Chen, MIT</p>
+          </div>
+          <div class="p-6 border-t">
+            <p class="text-gray-600 mb-4">Exploring the latest advancements in quantum computing and its practical applications.</p>
+            <a href="#" class="text-blue-600 hover:text-blue-800">Read more →</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+          <div class="bg-blue-50 p-6">
+            <span class="bg-purple-600 text-white text-xs px-3 py-1 rounded-full">Psychology</span>
+            <h3 class="text-xl font-semibold mt-4">The Impact of Social Media on Mental Health</h3>
+            <p class="text-gray-600 mt-2 text-sm">By Dr. Emily Rodriguez, Stanford University</p>
+          </div>
+          <div class="p-6 border-t">
+            <p class="text-gray-600 mb-4">A comprehensive analysis of how social media usage affects psychological well-being.</p>
+            <a href="#" class="text-blue-600 hover:text-blue-800">Read more →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-blue-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-16 text-blue-800">What Researchers Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="testimonial-card p-8">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+              <span class="font-bold">JD</span>
+            </div>
+            <div>
+              <h4 class="font-semibold">Dr. John Doe</h4>
+              <p class="text-sm text-gray-600">Professor of Physics</p>
+            </div>
+          </div>
+          <p class="text-gray-600">"This research portal has revolutionized how I collaborate with peers across institutions. The submission process is seamless and the feedback system is invaluable."</p>
+          <div class="mt-4 text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="testimonial-card p-8">
+          <div class="flex items-center mb-4">
+            <div class="bg-green-600 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+              <span class="font-bold">AS</span>
+            </div>
+            <div>
+              <h4 class="font-semibold">Dr. Amanda Smith</h4>
+              <p class="text-sm text-gray-600">Neuroscience Researcher</p>
+            </div>
+          </div>
+          <p class="text-gray-600">"The visibility my research has gained through this portal is remarkable. I've connected with collaborators from around the world that I wouldn't have met otherwise."</p>
+          <div class="mt-4 text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+        <div class="testimonial-card p-8">
+          <div class="flex items-center mb-4">
+            <div class="bg-purple-600 text-white rounded-full w-12 h-12 flex items-center justify-center mr-4">
+              <span class="font-bold">RK</span>
+            </div>
+            <div>
+              <h4 class="font-semibold">Dr. Robert Kim</h4>
+              <p class="text-sm text-gray-600">Environmental Scientist</p>
+            </div>
+          </div>
+          <p class="text-gray-600">"The analytics provided on my published papers have helped me understand my research impact in ways I never could before. Highly recommended for all academics."</p>
+          <div class="mt-4 text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News & Events -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-16 text-blue-800">News & Upcoming Events</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="news-card rounded-lg overflow-hidden shadow-md">
+          <div class="h-48 overflow-hidden">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <rect width="100" height="100" fill="#dbeafe" />
+              <path d="M0 50 Q 25 30, 50 50 T 100 50 V 100 H 0 Z" fill="#93c5fd" />
+              <circle cx="80" cy="20" r="10" fill="#3b82f6" opacity="0.5" />
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-3">
+              <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Conference</span>
+              <span class="text-gray-500 text-sm">June 15-18, 2023</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Annual Research Symposium</h3>
+            <p class="text-gray-600 mb-4">Join us for our flagship event featuring keynote speakers from leading research institutions around the world.</p>
+            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Learn more →</a>
+          </div>
+        </div>
+        <div class="news-card rounded-lg overflow-hidden shadow-md">
+          <div class="h-48 overflow-hidden">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <rect width="100" height="100" fill="#ede9fe" />
+              <path d="M0 70 Q 40 40, 80 70 T 100 50 V 100 H 0 Z" fill="#c4b5fd" />
+              <circle cx="20" cy="30" r="15" fill="#8b5cf6" opacity="0.5" />
+            </svg>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-3">
+              <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Workshop</span>
+              <span class="text-gray-500 text-sm">July 8, 2023</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Research Methodology Workshop</h3>
+            <p class="text-gray-600 mb-4">A hands-on workshop focused on advanced research methodologies and statistical analysis techniques.</p>
+            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium">Register now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-16 bg-blue-600 text-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Stay Updated with Research Trends</h2>
+        <p class="mb-8">Subscribe to our newsletter to receive the latest research papers, news, and event updates.</p>
+        <form class="flex flex-col md:flex-row gap-4 justify-center">
+          <input type="email" placeholder="Your email address" class="px-6 py-3 rounded-md text-gray-800 w-full md:w-auto focus:outline-none focus:ring-2 focus:ring-blue-300" required>
+          <button type="submit" class="bg-white text-blue-600 px-6 py-3 rounded-md font-medium hover:bg-blue-50 transition w-full md:w-auto">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container mx-auto px-6 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Research Portal</h3>
+          <p class="text-blue-100 mb-4">Advancing knowledge through collaborative research and academic excellence.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-white hover:text-blue-200"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-blue-100 hover:text-white transition">Home</a></li>
+            <li><a href="#" class="text-blue-100 hover:text-white transition">About Us</a></li>
+            <li><a href="#" class="text-blue-100 hover:text-white transition">Research Fields</a></li>
+            <li><a href="#" class="text-blue-100 hover:text-white transition">Submit Research</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-blue-100 hover:text-white transition">Guidelines</a></li>
+            <li><a href="#" class="text-blue-100 hover:text-white transition">FAQs</a></li>
+            <li><a href="#" class="text-blue-100 hover:text-white transition">Research Tools</a></li>
+            <li><a href="#" class="text-blue-100 hover:text-white transition">Publication Ethics</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact Us</h4>
+          <ul class="space-y-2">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+              <span class="text-blue-100">123 University Ave, Research City, RC 10001</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-2"></i>
+              <a href="mailto:info@researchportal.edu" class="text-blue-100 hover:text-white transition">info@researchportal.edu</a>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-2"></i>
+              <span class="text-blue-100">(123) 456-7890</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-blue-500 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <p>&copy; 2023 University Research Portal. All rights reserved.</p>
+        </div>
+        <div>
+          <ul class="flex space-x-4">
+            <li><a href="#" class="text-blue-200 hover:text-white transition">Privacy Policy</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition">Terms of Use</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white transition">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
