@@ -130,18 +130,49 @@
         // Form submission
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            
             // Validate form
             if (!validateForm()) {
                 return;
             }
-            
-            // Show success modal after a brief delay to simulate processing
-            setTimeout(() => {
+
+            // Collect form data
+            const formData = new FormData();
+            formData.append('studentName', document.getElementById('student-name').value);
+            formData.append('studentId', document.getElementById('student-id').value);
+            formData.append('email', document.getElementById('email').value);
+            formData.append('department', document.getElementById('department').value);
+            formData.append('universityName', document.getElementById('university-name').value);
+            formData.append('paperTitle', document.getElementById('paper-title').value);
+            formData.append('abstract', document.getElementById('abstract').value);
+            formData.append('keywords', document.getElementById('keywords').value);
+            formData.append('paper', fileUpload.files[0]);
+
+            // Show loading/progress (optional)
+            document.getElementById('submit-btn').disabled = true;
+            document.getElementById('submit-btn').textContent = 'Submitting...';
+
+            fetch('http://127.0.0.1:5000/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Submission failed');
+                return response.json();
+            })
+            .then(data => {
                 successModal.classList.remove('hidden');
-                // Generate random submission ID
-                document.getElementById('submission-id').textContent = 'SUB-' + Math.floor(10000 + Math.random() * 90000);
-            }, 1000);
+                document.getElementById('submission-id').textContent = data.submissionId || ('SUB-' + Math.floor(10000 + Math.random() * 90000));
+                form.reset();
+                fileInfo.classList.add('hidden');
+                progressBar.style.width = '0%';
+            })
+            .catch(err => {
+                alert('Submission failed. Please try again.');
+            })
+            .finally(() => {
+                document.getElementById('submit-btn').disabled = false;
+                document.getElementById('submit-btn').textContent = 'Submit Paper';
+            });
         });
         
         function validateForm() {
